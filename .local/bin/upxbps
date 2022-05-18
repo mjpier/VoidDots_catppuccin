@@ -1,0 +1,4 @@
+#!/bin/sh
+
+doas xbps-install -Syu
+pkill -RTMIN+16 dwmblocks

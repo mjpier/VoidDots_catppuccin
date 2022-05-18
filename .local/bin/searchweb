@@ -1,0 +1,17 @@
+#!/bin/sh
+# Open web page via dmenu and open on $BROWSER
+TEXT="duckduckgo\ngithub\nsuckless\narch\nwallhaven\nyoutube\nBibleGateway"
+
+DMENU="$( echo $TEXT | dmenu -l 16 -p web )"
+
+BROWSER="/usr/bin/qutebrowser" #Change this to your preference
+
+case "$DMENU" in
+    duckduckgo)     $BROWSER https://duckduckgo.com                     ;;
+    github)         $BROWSER https://github.com                         ;;
+    suckless)       $BROWSER https://suckless.org                       ;;
+    arch)           $BROWSER https://bbs.archlinux.org/index.php        ;;
+    wallhaven)      $BROWSER https://wallhaven.cc                       ;;
+    youtube)        $BROWSER https://www.youtube.com                    ;;
+    BibleGateway)   $BROWSER https://www.biblegateway.com               ;;
+esac

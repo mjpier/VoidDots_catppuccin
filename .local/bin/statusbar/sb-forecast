@@ -1,0 +1,7 @@
+#!/bin/sh
+
+weatherreport="$HOME/.local/share/weatherreport"
+
+. sb-theme
+
+display "^b$color1^ :$(cat "$weatherreport" | sed 's/.* //') ^d^"

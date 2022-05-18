@@ -1,0 +1,3 @@
+0 */1 * * * /home/mjpier/.local/bin/rssup
+*/30 * * * * /home/mjpier/.local/bin/mailup
+0 */6 * * * /home/mjpier/.local/bin/weathup

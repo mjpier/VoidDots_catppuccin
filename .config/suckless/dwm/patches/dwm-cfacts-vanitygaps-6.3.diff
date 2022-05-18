@@ -1,0 +1,204 @@
+diff --git a/config.def.h b/config.def.h
+index eec8bf2..2f7a665 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -6,6 +6,11 @@ static const unsigned int snap      = 0;    // snap pixel
+ static const int showbar            = 1;    // 0 means no bar
+ static const int topbar             = 1;    // 0 means bottom bar
+ static const int colorfultag        = 1;    // 0 means use SchemeSel for selected tag
++static const unsigned int gappih    = 20;   // horiz inner gap between windows
++static const unsigned int gappiv    = 20;   // vert inner gap between windows
++static const unsigned int gappoh    = 20;   // horiz outer gap between windows and screen edge
++static const unsigned int gappov    = 20;   // vert outer gap between windows and screen edge
++static int smartgaps                = 0;    // 1 means no outer gap when there is only one window
+ static const char *fonts[]          = { "monospace:size=13", "Symbols Nerd Font:size=13:antialias=true:autohint=true" };
+ 
+ /* Colors */
+@@ -92,13 +97,25 @@ static const int nmaster        = 1;    // number of clients in master area
+ static const int resizehints    = 0;    // 1 means respect size hints in tiled resizals
+ static const int lockfullscreen = 1;    // 1 will force focus on the fullscreen window
+ 
++#define FORCE_VSPLIT 1  // nrowgrid layout: force two clients to always split vertically
++#include "vanitygaps.c"
++
+ static const Layout layouts[] = {
+     /* symbol   arrange function */
+     { "[]=",    tile },                     // Default: Master on left, slaves on right
++    { "TTT",    bstack },                   // Master on top, slaves on bottom
++
++    { "[@]",    spiral },                   // Fibonacci spiral
++    { "[\\]",   dwindle },                  // Decreasing in size right and leftward
+ 
++    { "D[]",    deck },                     // Master on left, slaves in monocle-like mode on right
+     { "[M]",    monocle },                  // All windows on top of eachother
+ 
++    { "|M|",    centeredmaster },           // Master in middle, slaves on sides
++    { ">M>",    centeredfloatingmaster },   // Same but master floats
++
+     { "><>",    NULL },                     // no layout function means floating behavior
++    { NULL,     NULL },
+ };
+ 
+ static const MonitorRule monrules[] = {
+@@ -136,20 +153,20 @@ static Key keys[] = {
+     { ALTKEY,                   XK_period,  incnmaster,         {.i = -1 } },
+     { MODKEY,                   XK_h,       setmfact,           {.f = -0.05} },
+     { MODKEY,                   XK_l,       setmfact,           {.f = +0.05} },
+-    //{ MODKEY|ShiftMask,         XK_h,       setcfact,           {.f = +0.25} },
+-    //{ MODKEY|ShiftMask,         XK_l,       setcfact,           {.f = -0.25} },
+-    //{ MODKEY|ShiftMask,         XK_o,       setcfact,           {.f =  0.00} },
++    { MODKEY|ShiftMask,         XK_h,       setcfact,           {.f = +0.25} },
++    { MODKEY|ShiftMask,         XK_l,       setcfact,           {.f = -0.25} },
++    { MODKEY|ShiftMask,         XK_o,       setcfact,           {.f =  0.00} },
+     { MODKEY|ShiftMask,         XK_j,       zoom,               {0} },
+     { MODKEY,                   XK_Tab,     view,               {0} },
+     { MODKEY,                   XK_q,       killclient,         {0} },
+     { MODKEY,                   XK_t,       setlayout,          {.v = &layouts[0]} }, // tile
+     { MODKEY|ShiftMask,         XK_t,       setlayout,          {.v = &layouts[1]} }, // bstack
+     { MODKEY,                   XK_y,       setlayout,          {.v = &layouts[2]} }, // spiral
+-    //{ MODKEY|ShiftMask,         XK_y,       setlayout,          {.v = &layouts[3]} }, // dwindle
+-    //{ MODKEY,                   XK_u,       setlayout,          {.v = &layouts[4]} }, // deck
+-    //{ MODKEY|ShiftMask,         XK_u,       setlayout,          {.v = &layouts[5]} }, // monocle
+-    //{ MODKEY,                   XK_i,       setlayout,          {.v = &layouts[6]} }, // centeredmaster
+-    //{ MODKEY|ShiftMask,         XK_i,       setlayout,          {.v = &layouts[7]} }, // centeredfloatingmaster
++    { MODKEY|ShiftMask,         XK_y,       setlayout,          {.v = &layouts[3]} }, // dwindle
++    { MODKEY,                   XK_u,       setlayout,          {.v = &layouts[4]} }, // deck
++    { MODKEY|ShiftMask,         XK_u,       setlayout,          {.v = &layouts[5]} }, // monocle
++    { MODKEY,                   XK_i,       setlayout,          {.v = &layouts[6]} }, // centeredmaster
++    { MODKEY|ShiftMask,         XK_i,       setlayout,          {.v = &layouts[7]} }, // centeredfloatingmaster
+     { MODKEY,                   XK_space,   setlayout,          {0} },
+     { MODKEY|ShiftMask,         XK_space,   togglefloating,     {0} },
+     //{ MODKEY,                   XK_f,       togglefullscreen,   {0} },
+@@ -159,10 +176,10 @@ static Key keys[] = {
+     { ALTKEY,                   XK_Tab,     focusmon,           {.i = +1 } },
+     { ALTKEY|ShiftMask,         XK_h,       tagmon,             {.i = -1 } },
+     { ALTKEY|ShiftMask,         XK_l,       tagmon,             {.i = +1 } },
+-    //{ ALTKEY,                   XK_minus,   incrgaps,           {.i = -3 } },
+-    //{ ALTKEY,                   XK_equal,   incrgaps,           {.i = +3 } },
+-    //{ MODKEY,                   XK_a,       togglegaps,         {0} },
+-    //{ MODKEY|ShiftMask,         XK_a,       defaultgaps,        {0} },
++    { ALTKEY,                   XK_minus,   incrgaps,           {.i = -3 } },
++    { ALTKEY,                   XK_equal,   incrgaps,           {.i = +3 } },
++    { MODKEY,                   XK_a,       togglegaps,         {0} },
++    { MODKEY|ShiftMask,         XK_a,       defaultgaps,        {0} },
+     TAGKEYS(                    XK_1,                            0)
+     TAGKEYS(                    XK_2,                            1)
+     TAGKEYS(                    XK_3,                            2)
+diff --git a/dwm.c b/dwm.c
+index be9c52f..238fa75 100644
+--- a/dwm.c
++++ b/dwm.c
+@@ -87,6 +87,7 @@ typedef struct Client Client;
+ struct Client {
+     char name[256];
+     float mina, maxa;
++    float cfact;
+     int x, y, w, h;
+     int oldx, oldy, oldw, oldh;
+     int basew, baseh, incw, inch, maxw, maxh, minw, minh;
+@@ -120,6 +121,10 @@ struct Monitor {
+     int by;               /* bar geometry */
+     int mx, my, mw, mh;   /* screen size */
+     int wx, wy, ww, wh;   /* window area  */
++    int gappih;           /* horizontal gap between windows */
++    int gappiv;           /* vertical gap between windows */
++    int gappoh;           /* horizontal outer gaps */
++    int gappov;           /* vertical outer gaps */
+     unsigned int seltags;
+     unsigned int sellt;
+     unsigned int tagset[2];
+@@ -216,6 +221,7 @@ static void setclientstate(Client *c, long state);
+ static void setfocus(Client *c);
+ static void setfullscreen(Client *c, int fullscreen);
+ static void setlayout(const Arg *arg);
++static void setcfact(const Arg *arg);
+ static void setmfact(const Arg *arg);
+ static void setup(void);
+ static void seturgent(Client *c, int urg);
+@@ -225,7 +231,6 @@ static void sigstatusbar(const Arg *arg);
+ static void spawn(const Arg *arg);
+ static void tag(const Arg *arg);
+ static void tagmon(const Arg *arg);
+-static void tile(Monitor *);
+ static void togglebar(const Arg *arg);
+ static void togglecolorfultag();
+ static void togglefloating(const Arg *arg);
+@@ -695,6 +700,10 @@ createmon(void)
+     m->nmaster = nmaster;
+     m->showbar = showbar;
+     m->topbar = topbar;
++    m->gappih = gappih;
++    m->gappiv = gappiv;
++    m->gappoh = gappoh;
++    m->gappov = gappov;
+     m->colorfultag = colorfultag ? colorfultag : 0;
+ 
+     for (mi = 0, mon = mons; mon; mon = mon->next, mi++);
+@@ -1284,6 +1293,7 @@ manage(Window w, XWindowAttributes *wa)
+     c->w = c->oldw = wa->width;
+     c->h = c->oldh = wa->height;
+     c->oldbw = wa->border_width;
++    c->cfact = 1.0;
+ 
+     updatetitle(c);
+     if (XGetTransientForHint(dpy, w, &trans) && (t = wintoclient(trans))) {
+@@ -1769,6 +1779,24 @@ setlayout(const Arg *arg)
+         drawbar(selmon);
+ }
+ 
++void
++setcfact(const Arg *arg) {
++    float f;
++    Client *c;
++
++    c = selmon->sel;
++
++    if(!arg || !c || !selmon->lt[selmon->sellt]->arrange)
++        return;
++    f = arg->f + c->cfact;
++    if(arg->f == 0.0)
++        f = 1.0;
++    else if(f < 0.25 || f > 4.0)
++        return;
++    c->cfact = f;
++    arrange(selmon);
++}
++
+ /* arg > 1.0 will set mfact absolutely */
+ void
+ setmfact(const Arg *arg)
+@@ -1955,34 +1983,6 @@ tagmon(const Arg *arg)
+     sendmon(selmon->sel, dirtomon(arg->i));
+ }
+ 
+-void
+-tile(Monitor *m)
+-{
+-    unsigned int i, n, h, mw, my, ty;
+-    Client *c;
+-
+-    for (n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++);
+-    if (n == 0)
+-        return;
+-
+-    if (n > m->nmaster)
+-        mw = m->nmaster ? m->ww * m->mfact : 0;
+-    else
+-        mw = m->ww;
+-    for (i = my = ty = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), i++)
+-        if (i < m->nmaster) {
+-            h = (m->wh - my) / (MIN(n, m->nmaster) - i);
+-            resize(c, m->wx, m->wy + my, mw - (2*c->bw), h - (2*c->bw), 0);
+-            if (my + HEIGHT(c) < m->wh)
+-                my += HEIGHT(c);
+-        } else {
+-            h = (m->wh - ty) / (n - i);
+-            resize(c, m->wx + mw, m->wy + ty, m->ww - mw - (2*c->bw), h - (2*c->bw), 0);
+-            if (ty + HEIGHT(c) < m->wh)
+-                ty += HEIGHT(c);
+-        }
+-}
+-
+ void
+ togglebar(const Arg *arg)
+ {

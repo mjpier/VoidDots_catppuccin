@@ -1,0 +1,50 @@
+Mar 13 18:25 : exception: Failed to open '/home/mjpier/.mpd/mpdstate': No such file or directory
+Mar 13 18:25 : update: added Rene Gonzales - Paz En La Tierra - Pistas/07.DE QUE NOS VALE.MP3
+Mar 13 18:25 : update: added Rene Gonzales - Paz En La Tierra - Pistas/05.REY DE MI VIDA.MP3
+Mar 13 18:25 : update: added Rene Gonzales - Paz En La Tierra - Pistas/03.FE, JUSTICIA Y PAZ.MP3
+Mar 13 18:25 : update: added Rene Gonzales - Paz En La Tierra - Pistas/06.VENDRA.MP3
+Mar 13 18:25 : update: added Rene Gonzales - Paz En La Tierra - Pistas/02.CARPINTERO.MP3
+Mar 13 18:25 : update: added Rene Gonzales - Paz En La Tierra - Pistas/08.SI CONFIAS.MP3
+Mar 13 18:25 : update: added Rene Gonzales - Paz En La Tierra - Pistas/10.EL VENCEDOR.MP3
+Mar 13 18:25 : update: added Rene Gonzales - Paz En La Tierra - Pistas/09.TOMA MI VIDA.MP3
+Mar 13 18:25 : update: added Rene Gonzales - Paz En La Tierra - Pistas/01.PAZ EN LA TIERRA.MP3
+Mar 13 18:25 : update: added Rene Gonzales - Paz En La Tierra - Pistas/04.QUE HARIAS TU.MP3
+Mar 13 18:25 : update: added /01.PAZ EN LA TIERRA.MP3
+Mar 13 18:25 : update: added /02.CARPINTERO.MP3
+Mar 13 18:25 : update: added /03.FE, JUSTICIA Y PAZ.MP3
+Mar 13 18:25 : update: added /04.QUE HARIAS TU.MP3
+Mar 13 18:25 : update: added /05.REY DE MI VIDA.MP3
+Mar 13 18:25 : update: added /06.VENDRA.MP3
+Mar 13 18:25 : update: added /07.DE QUE NOS VALE.MP3
+Mar 13 18:25 : update: added /08.SI CONFIAS.MP3
+Mar 13 18:25 : update: added /09.TOMA MI VIDA.MP3
+Mar 13 18:25 : update: added /10.EL VENCEDOR.MP3
+Mar 13 18:36 : player: played "04.QUE HARIAS TU.MP3"
+Mar 13 18:41 : player: played "06.VENDRA.MP3"
+Mar 13 18:47 : player: played "07.DE QUE NOS VALE.MP3"
+Mar 13 18:52 : player: played "02.CARPINTERO.MP3"
+Mar 13 18:57 : player: played "03.FE, JUSTICIA Y PAZ.MP3"
+Mar 13 19:03 : player: played "05.REY DE MI VIDA.MP3"
+Mar 13 19:35 : player: played "04.QUE HARIAS TU.MP3"
+Mar 13 19:39 : player: played "06.VENDRA.MP3"
+Mar 13 19:45 : player: played "07.DE QUE NOS VALE.MP3"
+Mar 13 19:50 : player: played "02.CARPINTERO.MP3"
+Mar 13 19:50 : player: played "03.FE, JUSTICIA Y PAZ.MP3"
+Mar 13 19:51 : player: played "03.FE, JUSTICIA Y PAZ.MP3"
+Mar 13 19:57 : player: played "02.CARPINTERO.MP3"
+Mar 13 20:01 : player: played "04.QUE HARIAS TU.MP3"
+Apr 23 19:54 : player: played "07.DE QUE NOS VALE.MP3"
+Apr 23 19:59 : player: played "02.CARPINTERO.MP3"
+Apr 23 20:04 : player: played "04.QUE HARIAS TU.MP3"
+Apr 23 20:08 : player: played "01.PAZ EN LA TIERRA.MP3"
+Apr 23 20:13 : player: played "07.DE QUE NOS VALE.MP3"
+Apr 23 20:18 : player: played "02.CARPINTERO.MP3"
+Apr 23 20:22 : player: played "04.QUE HARIAS TU.MP3"
+May 10 20:26 : player: played "07.DE QUE NOS VALE.MP3"
+May 10 20:32 : player: played "02.CARPINTERO.MP3"
+May 10 20:36 : player: played "04.QUE HARIAS TU.MP3"
+May 10 21:24 : player: played "07.DE QUE NOS VALE.MP3"
+May 13 20:42 : player: played "01.PAZ EN LA TIERRA.MP3"
+May 14 11:33 : exception: Failed to decode /home/mjpier/Music/07.DE QUE NOS VALE.MP3; Failed to open '/home/mjpier/Music/07.DE QUE NOS VALE.MP3': No such file or directory
+May 14 11:33 : exception: Failed to enable output "pulse audio" (pulse); pa_context_connect() has failed: Connection refused
+May 14 11:33 : player: played "07.DE QUE NOS VALE.MP3"

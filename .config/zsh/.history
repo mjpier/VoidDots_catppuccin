@@ -1,0 +1,580 @@
+: 1652546111:0;doas usermod -aG _pipewire mjpier
+: 1652546385:0;mkdir st
+: 1652546393:0;rm st
+: 1652546398:0;rm -r st
+: 1652546409:0;git clone https://github.com/hoaxdream/void-st
+: 1652546418:0;cd void-st
+: 1652546484:0;mv VoidDots VoidDots-sin-sincro
+: 1652546508:0;git clone https://github.com/mjpier/VoidDots
+: 1652546594:0;cd .local/bin
+: 1652546599:0;cd statusbar
+: 1652546611:0;nano .xinitrc
+: 1652546627:0;nano sb-battery
+: 1652546686:0;cd .local
+: 1652546694:0;cd share
+: 1652546700:0;cd qutebrowser
+: 1652546727:0;mkdir greasemonkey
+: 1652546851:0;mkdir -p .local/share/qutebrowser/greasemonkey
+: 1652546866:0;ls .local/share/qutebrowser/
+: 1652546928:0;git status
+: 1652547111:0;git clone https://github.com/void-linux/void-packages.git
+: 1652547889:0;doas xbps-install -S base-chroot
+: 1652547989:0;./xbps-src binary-bootstrap
+: 1652548371:0;echo XBPS_ALLOW_RESTRICTED=yes >> etc/conf
+: 1652548435:0;cd srcpkgs/libXft
+: 1652548438:0;pwd
+: 1652548469:0;cd dev
+: 1652548486:0;cd patches/libXft-bgra
+: 1652548514:0;bat template
+: 1652548528:0;mkdir patches
+: 1652548560:0;cp change.patch /home/mjpier/void-packages/srcpkgs/libXft/patches
+: 1652548566:0;ls patches
+: 1652548586:0;cd void-packages
+: 1652548617:0;./xbps-src pkg -f libXft
+: 1652548735:0;doas xbps-install -R ./hostdir/binpkgs -f libXft
+: 1652548761:0;doas xbps-install -R ./hostdir/binpkgs -f libXft-devel
+: 1652548776:0;doas xbps-pkgdb -m repolock libXft
+: 1652548871:0;nvim .local/bin/statusbar/sb-battery
+: 1652548908:0;nano .local/bin/alert
+: 1652548916:0;nano .local/bin/statusbar/sb-audio
+: 1652548924:0;nano .local/bin/statusbar/sb-battery
+: 1652548973:0;nano .local/bin/statusbar/sb-xbps
+: 1652549112:0;doas xbps-install -S firejail bibletime libreoffice-writer libreoffice-calc VeraCrypt keepassxc
+: 1652549239:0;ls .config/dl/
+: 1652549280:0;ls VoidDots .config/dl
+: 1652549313:0;ls VoidDots/.config/dl
+: 1652549436:0;cd dl
+: 1652549444:0;unzip 77238675ca70ed373d3cc0970cebac12-f27d0d0301d63c03278a47e245042a55ff0a57cf.zip
+: 1652549451:0;cd 77238675ca70ed373d3cc0970cebac12-f27d0d0301d63c03278a47e245042a55ff0a57cf
+: 1652549478:0;rm -r 77238675ca70ed373d3cc0970cebac12-f27d0d0301d63c03278a47e245042a55ff0a57cf
+: 1652549506:0;mv 77238675ca70ed373d3cc0970cebac12-f27d0d0301d63c03278a47e245042a55ff0a57cf.zip InstalacionViod.zip
+: 1652549514:0;unzip InstalacionViod.zip
+: 1652549533:0;mv 77238675ca70ed373d3cc0970cebac12-f27d0d0301d63c03278a47e245042a55ff0a57cf InstalacionVoid
+: 1652549540:0;cd InstalacionVoid
+: 1652549544:0;nvim VoidLinux-Install.md
+: 1652549975:0;cp .config/dl/InstalacionVoid/VoidLinux-Install.md /home/mjpier/VoidDots/.config/dev/notes/
+: 1652550003:0;ls /home/mjpier/VoidDots/.config/dev/notes
+: 1652550073:0;doas xbps-install -S telegram-desktop
+: 1652553461:0;doas rm /var/service/{agetty-tty4,agetty-tty5,agetty-tty6}
+: 1652553473:0;ls /var/service
+: 1652553539:0;doas rm /var/service/sshd
+: 1652553969:0;mkdir -p /home/mjpier/.config/dl/{torrent,others,pics,docs}
+: 1652553974:0;ls .config/dl
+: 1652554074:0;mkdir -p /home/mjpier/.config/dl/torrent/{completed,incomplete}
+: 1652554713:0;doas xbps-install -S maim
+: 1652555583:0;ls .config/suckless
+: 1652556352:0;bat /etc/lvm/lvm.conf
+: 1652557157:0;doas xbps-install -S gimp
+: 1652557629:0;git clone https://github.com/hoaxdream/void-dots
+: 1652557755:0;cd void-dots
+: 1652557766:0;cd .config
+: 1652558147:0;nvim .zshenv
+: 1652558558:0;nvim -version
+: 1652559986:0;touch errorNVIM
+: 1652561030:0;nano -wl init.lua
+: 1652561050:0;nano after/syntax/vimwiki.vim
+: 1652561276:0;nano lua/plugins/packer.lua
+: 1652561360:0;nano lua/plugins/cmp.lua
+: 1652561498:0;cd /home/mjpier/.local/share/nvim/site/pack/packer/start/nvim-cmp/
+: 1652561670:0;nano stylua.toml
+: 1652561733:0;cd lua
+: 1652561750:0;nano cmp/config.lua
+: 1652561818:0;ls cmp
+: 1652561917:0;nano cmp.lua
+: 1652561953:0;cd .config/nvim
+: 1652562025:0;cd plugin
+: 1652562038:0;nano packer_compiled.lua
+: 1652562294:0;git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+: 1652563658:0;nvim
+: 1652564577:0;git clone https://github.com/nvchad/nvchad
+: 1652564594:0;git clone https://github.com/siduck/chadwm
+: 1652564713:0;nano .config/xorg/xresources
+: 1652564770:0;nano .config/xorg/colors/xcolor
+: 1652564798:0;git clone https://github.com/siduck/dotfiles
+: 1652565797:0;nano errorNVIM
+: 1652567029:0;mv .Xresources XresourcesNOOO
+: 1652567033:0;ls -lah
+: 1652567213:0;cp -r st st-ONEDARK
+: 1652567359:0;git clone https://github.com/siduck/st
+: 1652567399:0;cd st
+: 1652567589:0;cp -r themes /home/mjpier/.config/suckless/dwm_pulsevol-ONEDARK
+: 1652567598:0;clear
+: 1652567796:0;cd chadwm/chadwm
+: 1652568232:0;rm -r dwm_pulsevol-ONEDARK
+: 1652568267:0;cp -r dwm_pulsevol dwm_pulsevol-ONEDARK
+: 1652568277:0;cd dwm_pulsevol-ONEDARK
+: 1652568630:0;git clone https://github.com/ysfgrgO7/Suckless
+: 1652568728:0;mkdir ysfgrgO7
+: 1652568741:0;mv Suckless ysfgrgO7
+: 1652568745:0;cd ysfgrgO7
+: 1652568764:0;git clone https://github.com/ysfgrgO7/Wallpapers
+: 1652568800:0;git clone https://github.com/ysfgrgO7/Dotfiles
+: 1652568824:0;git clone https://github.com/ysfgrgO7/nvoid
+: 1652569014:0;git clone https://github.com/ysfgrgO7/lfetch
+: 1652569088:0;git clone https://github.com/ysfgrgO7/bashfetch
+: 1652569127:0;cd themes
+: 1652569536:0;cd /home/mjpier/.config/suckless/dwm_pulsevol-ONEDARK
+: 1652569847:0;cd .config/suckless/dwm_pulsevol-ONEDARK
+: 1652570067:0;cd st-ONEDARK
+: 1652570076:0;nano config.def.h
+: 1652570138:0;cd chadwm/chadwm/themes/
+: 1652570142:0;nvim onedark.h
+: 1652570267:0;nvim /home/mjpier/ysfgrgO7/Suckless/st/config.def.h
+: 1652570301:0;nvim /home/mjpier/ysfgrgO7/Suckless/st/themes/onedarker.h
+: 1652570848:0;cd .config/suckless/st-ONEDARK
+: 1652572824:0;doas xbps-install -S gpick
+: 1652575693:0;nvim .config/dunst/dunstrc
+: 1652575751:0;touch dunstOneDark
+: 1652575761:0;nano dunstOneDark
+: 1652575772:0;nvim dunstOneDark
+: 1652576383:0;make && doas make install
+: 1652576399:0;htop
+: 1652576459:0;cd VoidDots
+: 1652576850:0;xrdb -merge ~/.config/xorg/xresources
+: 1652578417:0;cp -r dmenu_centro_borde_highlight_gruvbox_grid dmenu_centro_borde_highlight_ONEDARK_grid
+: 1652578419:0;LS
+: 1652578430:0;cd dmenu_centro_borde_highlight_ONEDARK_grid
+: 1652579167:0;nvim ~/.config/xorg/colors/xcolor
+: 1652579341:0;xrdb -merge ~/.Xresources
+: 1652579363:0;xrdb ~/.Xresources
+: 1652579907:0;nvim chadwm/chadwm/themes/onedark.h
+: 1652580376:0;nvim .config/shell/aliasrc
+: 1652588624:0;libreoffice-calc
+: 1652588627:0;libreoffice
+: 1652623620:0;upxbps
+: 1652625991:0;doas xbps-install -S unrar
+: 1652626052:0;doas xbps-install -S p7zip-unrar
+: 1652626453:0;git clone git://notabug.org/Marcoapc/voidxanmodK.git
+: 1652626559:0;git clone https://notabug.org/Marcoapc/voidxanmodK
+: 1652626582:0;ls voidxanmodK
+: 1652626955:0;doas xbps-install -S zramen
+: 1652627325:0;doas xbps-install -S dbus qemu libvirt virt-manager
+: 1652627369:0;doas xbps-install -S bridge-utils iptables
+: 1652627923:0;doas xbps-install -S bootiso
+: 1652630237:0;ls .local/share/qutebrowser/greasemonkey
+: 1652631425:0;doas xbps-install -S imagewriter
+: 1652631762:0;doas imagewriter
+: 1652631935:0;doas xbps-remove -R imagewriter
+: 1652632302:0;cd .config/dl
+: 1652632326:0;lsblk
+: 1652632365:0;doas dd bs=4M if=ubuntustudio-22.04-dvd-amd64.iso of=/dev/sdb conv=fdatasync
+: 1652634362:0;ls /boot/
+: 1652634457:0;uname -a
+: 1652634495:0;doas cp /boot/config* /home/mjpier
+: 1652634515:0;doas cp -r /boot/config* /home/mjpier
+: 1652634540:0;doas cd /boot
+: 1652634558:0;doas ls /boot
+: 1652644116:0;git clone git://git.suckless.org/sbase
+: 1652644134:0;ls sbase
+: 1652647522:0;doas xbps-install -S gnome-latex
+: 1652647547:0;cd sbase
+: 1652647560:0;make
+: 1652647742:0;git clone https://github.com/latex3/latex2e.git
+: 1652648466:0;ls .config/xorg/xresources
+: 1652648745:0;mv XresourcesNOOO .Xresources
+: 1652648822:0;bat .xinitrc
+: 1652649642:0;doas xbps-install -S kdenlive
+: 1652649709:0;doas xbps-install -S vlc
+: 1652649765:0;doas xbps-install -S openshot
+: 1652651824:0;cp errorNVIM errorNVIM2
+: 1652653435:0;cd nvchad
+: 1652653440:0;git pull
+: 1652653598:0;nvim +'hi NormalFloat guibg=#1e222a' +PackerSync
+: 1652653732:0;mkdir Nestero_catppuccin
+: 1652653882:0;cd catppuccin
+: 1652654116:0;git clone https://gitlab.com/nesstero/catppuccin.git
+: 1652654147:0;git clone https://github.com/catppuccin/nvim.git
+: 1652654167:0;nvim nvim/README.md
+: 1652654271:0;git clone https://github.com/catppuccin/YouTube.git
+: 1652654358:0;git clone https://github.com/catppuccin/spicetify.git
+: 1652654400:0;mv catppuccin catppuccin-gitlab
+: 1652654418:0;git clone https://github.com/catppuccin/catppuccin.git
+: 1652654494:0;git clone https://github.com/catppuccin/wallpapers.git
+: 1652654757:0;ls catppuccin-gitlab/
+: 1652654860:0;git clone https://github.com/catppuccin/discord.git
+: 1652654870:0;git clone https://github.com/catppuccin/tym.git
+: 1652654891:0;git clone https://github.com/catppuccin/conky.git
+: 1652654901:0;git clone https://github.com/catppuccin/dunst.git
+: 1652654931:0;git clone https://github.com/catppuccin/termux.git
+: 1652655090:0;git clone https://github.com/catppuccin/floris-board.git
+: 1652655126:0;git clone https://github.com/catppuccin/xfce4-terminal.git
+: 1652655179:0;git clone https://github.com/catppuccin/github.git
+: 1652655246:0;git clone https://github.com/catppuccin/fzf.git
+: 1652655293:0;git clone https://github.com/catppuccin/grub.git
+: 1652655327:0;git clone https://github.com/catppuccin/tmux.git
+: 1652655335:0;git clone https://github.com/catppuccin/gtk.git
+: 1652655380:0;git clone https://github.com/catppuccin/palette.git
+: 1652655683:0;git clone https://github.com/catppuccin/lxqt-theme.git
+: 1652655700:0;git clone https://github.com/catppuccin/sddm.git
+: 1652655725:0;git clone https://github.com/catppuccin/cursors
+: 1652655738:0;git clone https://github.com/catppuccin/cursors.git
+: 1652655755:0;git clone https://github.com/catppuccin/papirus-folders
+: 1652655787:0;git clone https://github.com/catppuccin/rofi
+: 1652655819:0;git clone https://github.com/catppuccin/duckduckgo
+: 1652655893:0;git clone https://github.com/catppuccin/chrome
+: 1652655912:0;git clone https://github.com/catppuccin/plank
+: 1652655959:0;git clone https://github.com/catppuccin/mailspring
+: 1652655994:0;git clone https://github.com/catppuccin/geany
+: 1652656061:0;git clone https://github.com/catppuccin/kde
+: 1652656122:0;git clone https://github.com/catppuccin/telegram
+: 1652656240:0;git clone https://github.com/catppuccin/firefox
+: 1652656251:0;git clone https://github.com/catppuccin/kitty
+: 1652656285:0;git clone https://github.com/catppuccin/zathura
+: 1652656298:0;git clone https://github.com/catppuccin/urxvt
+: 1652656324:0;git clone https://github.com/catppuccin/konsole
+: 1652656331:0;git clone https://github.com/catppuccin/cava
+: 1652656337:0;git clone https://github.com/catppuccin/st
+: 1652656453:0;git clone https://github.com/catppuccin/style-guide
+: 1652656473:0;git clone https://github.com/catppuccin/xresources
+: 1652656498:0;git clone https://github.com/catppuccin/btop
+: 1652656506:0;git clone https://github.com/catppuccin/terminator
+: 1652656515:0;git clone https://github.com/catppuccin/iterm
+: 1652656550:0;git clone https://github.com/catppuccin/alacritty
+: 1652656566:0;git clone https://github.com/catppuccin/gnome-terminal
+: 1652656740:0;cd .config/qutebrowser
+: 1652656817:0;cp -r catppuccin-gitlab/qutebrowser/catppuccin /home/mjpier/.config/qutebrowser
+: 1652656842:0;nvim config.py
+: 1652656984:0;cd /home/mjpier/Nestero_catppuccin/dunst
+: 1652657025:0;cd /home/mjpier/.config/dunst/
+: 1652657030:0;nvim dunstrc
+: 1652657381:0;pkill dunst
+: 1652657466:0;notify-send -u low -t 0 "Low sumary" "Low body"
+: 1652657476:0;notify-send -u normal -t 0 "Normal sumary" "Normal body"
+: 1652657488:0;notify-send -u critical -t 0 "Critical sumary" "Critical body"
+: 1652657498:0;notify-send -u critical -t 0 "test" "Critical body"
+: 1652657509:0;nvim .xinitrc
+: 1652657621:0;cd .config/suckless
+: 1652657653:0;cp -r st st-catppuccin
+: 1652657718:0;cd Nestero_catppuccin/catppuccin-gitlab/st
+: 1652657734:0;ls Nestero_catppuccin/st
+: 1652658778:0;nvim st-catppuccin.diff
+: 1652658823:0;nvim errorNVIM
+: 1652659118:0;nvim .xinitrc 
+: 1652659484:0;cd Nestero_catppuccin
+: 1652659515:0;cp -r gtk gtk-prueba
+: 1652659523:0;cd gtk-prueba
+: 1652659634:0;make package dest=/home/mjpier quiet=false
+: 1652659686:0;rm -r gtk-prueba
+: 1652659697:0;ls /home/mjpier
+: 1652659742:0;cp -r gtk gtk-prue
+: 1652659748:0;cd gtk-prue
+: 1652659799:0;ls gtk-prue
+: 1652659807:0;rm -r gtk
+: 1652659815:0;rm -r gtk-prue
+: 1652659837:0;git clone https://github.com/catppuccin/gtk
+: 1652659863:0;cp -r gtk gtk-pre
+: 1652659870:0;cd gtk-pre
+: 1652659883:0;make build
+: 1652659916:0;cd ..
+: 1652659931:0;rm gtk-pre
+: 1652659944:0;rm -r gtk-pre
+: 1652659956:0;ls gtk
+: 1652660233:0;rm config.h
+: 1652660243:0;cp config.def.h config.h
+: 1652660536:0;cd .config/suckless/st-catppuccin
+: 1652660546:0;nvim config.def.h
+: 1652660553:0;nvim config.h
+: 1652660593:0;mi
+: 1652660607:0;ls
+: 1652660624:0;upnotify
+: 1652660632:0;lf
+: 1652660647:0;ncmpcpp
+: 1652660700:0;mafetch
+: 1652660706:0;fetch
+: 1652660712:0;fetchy
+: 1652660732:0;ls .local/bin
+: 1652660762:0;unix
+: 1652660780:0;shitfetch
+: 1652661040:0;cd
+: 1652661051:0;exit
+: 1652661063:0;git clone https://github.com/Mangeshrex/rxfetch.git
+: 1652661096:0;cd rxfetch
+: 1652661097:0;ls
+: 1652661118:0;cp rxfetch /home/mjpier/.local/bin
+: 1652661126:0;./rxfetch
+: 1652661347:0;cd
+: 1652661357:0;git clone https://github.com/Pocco81/TheSupercalifragilisticexpialidociousDots.git
+: 1652661656:0;nano errorNVIM
+: 1652662481:0;lf
+: 1652662601:0;cd Nestero_catppuccin/ls
+: 1652662606:0;cd Nestero_catppuccin/
+: 1652662607:0;ls
+: 1652662616:0;ls YouTube
+: 1652662649:0;mkdir Nestero_catppuccin_1
+: 1652662663:0;cd Nestero_catppuccin_1
+: 1652662672:0;ls catppuccin-gitlab
+: 1652662728:0;git clone https://gitlab.com/nesstero/catppuccin.git
+: 1652662736:0;ls catppuccin
+: 1652662756:0;mv catppuccin catppuccin-gitlab
+: 1652662757:0;ls
+: 1652662762:0;cd catppuccin-gitlab
+: 1652662766:0;cd ..
+: 1652662788:0;ls
+: 1652662806:0;git clone https://github.com/catppuccin/Youtube
+: 1652662811:0;cd Youtube
+: 1652662813:0;ls
+: 1652662816:0;cd ..
+: 1652662831:0;git clone https://github.com/catppuccin/alacritty
+: 1652662845:0;git clone https://github.com/catppuccin/btop
+: 1652662855:0;git clone https://github.com/catppuccin/catppuccin
+: 1652662874:0;git clone https://github.com/catppuccin/cava
+: 1652662883:0;git clone https://github.com/catppuccin/chrome
+: 1652662894:0;git clone https://github.com/catppuccin/conky
+: 1652662902:0;git clone https://github.com/catppuccin/cursors
+: 1652662916:0;git clone https://github.com/catppuccin/discord
+: 1652662925:0;git clone https://github.com/catppuccin/duckduckgo
+: 1652662933:0;git clone https://github.com/catppuccin/dunst
+: 1652662940:0;git clone https://github.com/catppuccin/firefox
+: 1652662955:0;git clone https://github.com/catppuccin/floris-board
+: 1652662964:0;git clone https://github.com/catppuccin/fzf
+: 1652662974:0;git clone https://github.com/catppuccin/geany
+: 1652662983:0;git clone https://github.com/catppuccin/github
+: 1652662995:0;git clone https://github.com/catppuccin/gnome-terminal
+: 1652663002:0;git clone https://github.com/catppuccin/grub
+: 1652663017:0;git clone https://github.com/catppuccin/gtk
+: 1652663033:0;lf
+: 1652663056:0;git clone https://github.com/catppuccin/iterm
+: 1652663089:0;git clone https://github.com/catppuccin/kde
+: 1652663098:0;git clone https://github.com/catppuccin/kitty
+: 1652663109:0;git clone https://github.com/catppuccin/konsole
+: 1652663123:0;git clone https://github.com/catppuccin/lxqt-theme
+: 1652663136:0;git clone https://github.com/catppuccin/mailspring
+: 1652663145:0;git clone https://github.com/catppuccin/nvim
+: 1652663163:0;git clone https://github.com/catppuccin/palette
+: 1652663174:0;git clone https://github.com/catppuccin/papirus-folders
+: 1652663183:0;git clone https://github.com/catppuccin/plank
+: 1652663191:0;git clone https://github.com/catppuccin/rofi
+: 1652663202:0;git clone https://github.com/catppuccin/sddm
+: 1652663218:0;git clone https://github.com/catppuccin/spicetify
+: 1652663227:0;git clone https://github.com/catppuccin/st
+: 1652663238:0;git clone https://github.com/catppuccin/style-guide
+: 1652663248:0;git clone https://github.com/catppuccin/telegram
+: 1652663262:0;git clone https://github.com/catppuccin/terminator
+: 1652663271:0;git clone https://github.com/catppuccin/termux
+: 1652663278:0;git clone https://github.com/catppuccin/tmux
+: 1652663287:0;git clone https://github.com/catppuccin/tym
+: 1652663298:0;git clone https://github.com/catppuccin/urxvt
+: 1652663313:0;git clone https://github.com/catppuccin/xfce4-terminal
+: 1652663328:0;git clone https://github.com/catppuccin/xresources
+: 1652663341:0;git clone https://github.com/catppuccin/zathura
+: 1652663354:0;git clone https://github.com/catppuccin/wallpapers
+: 1652663581:0;lf
+: 1652741799:0;nvim errorNVIM
+: 1652742029:0;nvim .xinitrc
+: 1652742072:0;ls /usr/local/bin
+: 1652742320:0;cp /usr/share/applications/nvim.desktop .local/share/applications
+: 1652743079:0;mkdir catpu
+: 1652743110:0;mv *.zip catpu
+: 1652743121:0;cd catpu
+: 1652743122:0;ls
+: 1652743132:0;unzip Catppuccin_Dark.zip
+: 1652743148:0;unzip Catppuccin_Mid_Dark.zip
+: 1652743162:0;unzip gtk-Catppuccin-Dark.zip
+: 1652743182:0;unzip gtk-Catppuccin-Mid-Dark-Theme.zip
+: 1652743279:0;ls
+: 1652743297:0;cp -r Catppuccin_Dark /home/mjpier/.local/share/themes
+: 1652743308:0;cp -r Catppuccin_Mid_Dark  /home/mjpier/.local/share/themes
+: 1652743320:0;ls /home/mjpier/.local/share/themes
+: 1652743331:0;ls
+: 1652743342:0;cd .config
+: 1652743352:0;nvim gtk-2.0/gtkrc-2.0
+: 1652743439:0;nvim gtk-3.0/settings.ini
+: 1652743658:0;rxfetch
+: 1652743731:0;ls
+: 1652743750:0;unzip Catppuccin_Dark_Borderless.zip
+: 1652743753:0;ls
+: 1652743787:0;unzip Catppuccin_Mid_Dark_Borderless.zip
+: 1652743790:0;ls
+: 1652743810:0;mv InstalacionViod.zip /home/mjpier/.config/dl
+: 1652743813:0;ls
+: 1652743867:0;cp -r Catppuccin_Dark_Borderless /home/mjpier/.local/share/themes
+: 1652743870:0;ls
+: 1652743889:0;cp -r Catppuccin_Mid_Dark_Borderless /home/mjpier/.local/share/themes
+: 1652743897:0;ls
+: 1652743994:0;ncmpcpp
+: 1652745934:0;doas xbps-install -S btop
+: 1652745954:0;rxfetch
+: 1652745978:0;btop
+: 1652746023:0;upxbps
+: 1652746176:0;mkdir ayamir
+: 1652746179:0;cd ayamir
+: 1652746201:0;git clone https://github.com/ayamir/dotfiles
+: 1652746379:0;ls
+: 1652746386:0;lf
+: 1652747404:0;git clone https://github.com/ayamir/dotfiles
+: 1652749427:0;ls -lah
+: 1652749431:0;cd dotfiles
+: 1652749432:0;ls
+: 1652749437:0;cd catppuccin
+: 1652749438:0;ls
+: 1652749444:0;cd .config
+: 1652749446:0;ls
+: 1652749449:0;pwd
+: 1652749458:0;cd .config
+: 1652749458:0;ls
+: 1652749482:0;screenshot
+: 1652749674:0;mv htop htop-hoaxdream
+: 1652749676:0;ls
+: 1652749688:0;ls htop
+: 1652749698:0;cp -r htop /home/mjpier/.config
+: 1652749785:0;btop
+: 1652749834:0;mv btop btop-original
+: 1652749835:0;ls
+: 1652749841:0;ls btop
+: 1652749855:0;cp -r btop /home/mjpier/.config
+: 1652749861:0;btop
+: 1652749903:0;nvim btop/btop.conf
+: 1652749942:0;btop
+: 1652750008:0;upxbps
+: 1652750036:0;cd
+: 1652750053:0;cd ayamir/dotfiles/catppuccin/.config
+: 1652750054:0;ls
+: 1652750103:0;mv dunst dunst-catppuccin-antes
+: 1652750108:0;ls dunst
+: 1652750124:0;nvim dunst/dunstrc
+: 1652750133:0;nvim dunst/sid
+: 1652750152:0;cp -r dunst /home/mjpier/.config
+: 1652750155:0;ls
+: 1652750162:0;pkill dunst
+: 1652750211:0;notify-send -u low -t 0 "Low sumary" "Low body"
+: 1652750225:0;notify-send -u normal -t 0 "Normal sumary" "Normal body"
+: 1652750238:0;notify-send -u critical -t 0 "Critical sumary" "Critical body"
+: 1652750255:0;notify-send -u critical -t 0 "test" "Critical body"
+: 1652750263:0;upnotify
+: 1652750303:0;ls
+: 1652750360:0;nvim /home/mjpier/.ncmpcpp/config
+: 1652750368:0;ls ncmpcpp
+: 1652750386:0;ls /home/mjpier/.ncmpcpp/
+: 1652750406:0;cd ..
+: 1652750407:0;ls
+: 1652751618:0;lf
+: 1652751695:0;doas xbps-install -S qt5ct
+: 1652751803:0;cp -r Nestero_catppuccin_1/catppuccin-gitlab/qt5/catppuccin.conf /home/mjpier/.config/qt5ct/colors
+: 1652751840:0;nvim .config/zsh/.zshenv
+: 1652752139:0;bat .config/gtk-2.0/gtkrc-2.0
+: 1652752265:0;ls
+: 1652752269:0;cd
+: 1652752278:0;cd .config/suckless
+: 1652752279:0;ls
+: 1652752341:0;cp -r dmenu_centro_borde_highlight_gruvbox_grid dmenu_centro_borde_highlight_CATPPUCCIN_grid
+: 1652752343:0;ls
+: 1652752349:0;cd dmenu_centro_borde_highlight_CATPPUCCIN_grid
+: 1652752350:0;ls
+: 1652752501:0;cd ayamir
+: 1652752502:0;ls
+: 1652752506:0;cd dotfiles/catppuccin
+: 1652752507:0;ls
+: 1652752517:0;cd .dmenu
+: 1652752519:0;ls
+: 1652752535:0;nvim config.mk
+: 1652752544:0;nvim config.def.h
+: 1652752561:0;nvim config.h
+: 1652752590:0;nvim config.def.h
+: 1652752891:0;rm config.h
+: 1652752906:0;cp config.def.h config.h
+: 1652752908:0;mi
+: 1652752942:0;cd ..
+: 1652752944:0;ls
+: 1652752950:0;cd .dwm
+: 1652752951:0;ls
+: 1652752959:0;nvim config.mk
+: 1652752966:0;cd ..
+: 1652752968:0;ls
+: 1652753002:0;mkdir anteriores
+: 1652753035:0;mv dmenu_centro_borde_highlight_ONEDARK_grid /home/mjpier/.config/suckless/anteriores
+: 1652753037:0;ls
+: 1652753055:0;mv dmenu_centro_borde_highlight_gruvbox_grid  /home/mjpier/.config/suckless/anteriores
+: 1652753057:0;ls
+: 1652753085:0;mv dwm_pulsevol_cornerRounds anteriores
+: 1652753086:0;ls
+: 1652753102:0;mv st anteriores
+: 1652753110:0;mv st-ONEDARK anteriores
+: 1652753111:0;ls
+: 1652753140:0;mv dwm_pulsevol-ONEDARK anteriores
+: 1652753141:0;ls
+: 1652753168:0;mv dwm-H anteriores
+: 1652753172:0;ls
+: 1652753212:0;cp -r dwm_pulsevol dwm_pulsevol-CATPPUCCIN
+: 1652753214:0;ls
+: 1652753222:0;cd dwm_pulsevol-CATPPUCCIN
+: 1652753223:0;ls
+: 1652753245:0;ls .config/suckless/anteriores/dwm-H
+: 1652753261:0;nvim config.def.h
+: 1652753283:0;nvim config.h
+: 1652753334:0;nvim config.def.h
+: 1652753564:0;nvim /home/mjpier/chadwm/chadwm/themes/catppuccin.h
+: 1652753615:0;nvim config.def.h
+: 1652753880:0;rm config.h
+: 1652753886:0;cp config.def.h config.h
+: 1652753888:0;mi
+: 1652753940:0;cd .config/suckless
+: 1652753941:0;ls
+: 1652753960:0;mv dwm_pulsevol anteriores
+: 1652753962:0;ls
+: 1652753982:0;cd ayamir/dotfiles/catppuccin/
+: 1652753984:0;ls
+: 1652754012:0;fetch
+: 1652754030:0;mafetch
+: 1652754125:0;btop
+: 1652754151:0;nvim .tmux.mine
+: 1652755256:0;cat .config/zsh/.zshenv
+: 1652755390:0;ls Nestero_catppuccin_1
+: 1652755407:0;cd Nestero_catppuccin_1
+: 1652755408:0;ls
+: 1652755412:0;cd zathura
+: 1652755413:0;ls
+: 1652755490:0;lf
+: 1652755613:0;cp Nestero_catppuccin_1/zathura/catppuccin /home/mjpier/.config/zathura
+: 1652755620:0;cd .config/zathura
+: 1652755621:0;ls
+: 1652755657:0;nvim /home/mjpier/.config/zathura/zathurarc
+: 1652755723:0;lf
+: 1652755767:0;rxfetch
+: 1652755866:0;cd ..
+: 1652755867:0;ls
+: 1652755873:0;cd cursors
+: 1652755874:0;ls
+: 1652755880:0;ls cursors
+: 1652755912:0;nvim /home/mjpier/.config/gtk-2.0/gtkrc-2.0
+: 1652755934:0;nvim /home/mjpier/.config/gtk-3.0/settings.ini
+: 1652755955:0;ls /home/mjpier/.local/share/icons
+: 1652756017:0;ls
+: 1652756025:0;cd cursors
+: 1652756026:0;ls
+: 1652756108:0;tar -xf Catppuccin-Dark-Cursors.tar.gz
+: 1652756110:0;ls
+: 1652756122:0;tar -xf Catppuccin-Mauve-Cursors.tar.gz
+: 1652756137:0;ls
+: 1652756142:0;ls Catppuccin-Dark-Cursors
+: 1652756167:0;cp -r Catppuccin-Dark-Cursors /home/mjpier/.local/share/icons
+: 1652756178:0;cp -r Catppuccin-Mauve-Cursors /home/mjpier/.local/share/icons
+: 1652756195:0;cd
+: 1652756202:0;cd .local/share/icons
+: 1652756205:0;ls
+: 1652756223:0;cd
+: 1652756234:0;nvim .config/gtk-2.0/gtkrc-2.0
+: 1652756290:0;nvim .config/gtk-3.0/settings.ini
+: 1652756425:0;nvim .local/share/icons/Catppuccin-Dark-Cursors/index.theme
+: 1652756454:0;nvim .local/share/icons/Adwaita/index.theme
+: 1652756475:0;nvim .local/share/icons/ArcAurora-cursors/index.theme
+: 1652756502:0;nvim .config/gtk-2.0/gtkrc-2.0
+: 1652756526:0;ls .local/share/icons
+: 1652756560:0;nvim .config/gtk-3.0/settings.ini
+: 1652756605:0;nvim .config/gtk-2.0/gtkrc-2.0
+: 1652756742:0;ls .local/share/icons
+: 1652829836:0;doas xbps-install -S kdenlive
+: 1652829894:0;doas xbps-remove -R openshot
+: 1652829920:0;doas xbps-install -S kdenlive
+: 1652830012:0;rxfetch
+: 1652830298:0;upxbps
+: 1652830316:0;ls
+: 1652830367:0;doas xbps-remove -R kdenlive
+: 1652830421:0;doas xbps-install -S openshot
+: 1652830650:0;rm -r VoidDots-sin-sincro
+: 1652830693:0;rmdir VoidDots-sin-sincro
+: 1652830704:0;doa rmdir VoidDots-sin-sincro
+: 1652830708:0;doas rmdir VoidDots-sin-sincro
+: 1652830743:0;doas rmdir -r VoidDots-sin-sincro
+: 1652830752:0;doas rmdir -p VoidDots-sin-sincro
+: 1652830818:0;mkdir VoidDots_catppuccin
+: 1652830889:0;cp -r .config VoidDots_catppuccin

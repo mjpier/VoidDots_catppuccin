@@ -1,0 +1,11 @@
+#!/bin/sh
+set -- lock exit shutdown reboot
+#ctl='sudo loginctl'
+ctl='loginctl'
+op="$(printf "%s\n" "$@" | dmenu -m 0 -p 'System')"
+case "$op" in
+	lock) slock_time & mpc pause ;;
+	exit) kill -TERM "$(pgrep -u "$USER" "\bdwm$")" ;;
+	shutdown) $ctl poweroff -i ;;
+	reboot) $ctl reboot -i ;;
+esac

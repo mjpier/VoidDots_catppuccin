@@ -1,0 +1,13 @@
+#!/bin/sh
+
+version=$(uname -r)
+
+major=`echo $version | cut -d. -f1`
+minor=`echo $version | cut -d. -f2`
+
+updatekernel() {
+    sudo vkpurge rm all
+    sudo xbps-reconfigure -f linux$major.$minor
+}
+
+updatekernel
