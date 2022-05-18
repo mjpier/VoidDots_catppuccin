@@ -1,14 +1,14 @@
 #!/bin/sh
 
-# Gruvbox colorscheme
-color0="#5d6061"    # gray
+# Gruvbox catppuccin
+color0="#585767"    # gray
 #color1="#282828"    # black
-color1="#32302f"    # black
-color2="#ea6962"    # red
-color3="#a9b665"    # green
-color4="#e78a4e"    # yellow
-color5="#7daea3"    # blue
-color6="#d3869b"    # magenta
+color1="#1e1d2d"    # black
+color2="#f28fad"    # red
+color3="#abe9b3"    # green
+color4="#fae3b0"    # yellow
+color5="#96cdfb"    # blue
+color6="#d5aeea"    # magenta
 color7="#89b482"    # cyan
 color8="#d4be98"    # white
 
