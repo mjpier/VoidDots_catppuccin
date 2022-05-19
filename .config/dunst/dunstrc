@@ -19,7 +19,7 @@
     padding = 20
     horizontal_padding = 20
     frame_width = 2
-    corner_radius = 10
+    corner_radius = 0 # for corner 10
 
     separator_color = auto
     sort = yes
@@ -42,7 +42,8 @@
     #   %%  Literal %
     # Markup is allowed
     format = "<b>%s</b>\n%b"
-    alignment = left
+    #alignment = left
+    alignment = center
     show_age_threshold = 60
     word_wrap = true
     ellipsize = middle
@@ -61,7 +62,8 @@
     history_length = 20
 
     ### Misc/Advanced ###
-    dmenu = /usr/bin/kitty -e fzf:
+    #dmenu = /usr/bin/kitty -e fzf:
+    dmenu = /usr/bin/dmenu -p dunst:
     title = Dunst
     class = Dunst
     startup_notification = false
