@@ -255,10 +255,13 @@ static Key keys[] = {
     { ALTKEY|ShiftMask,         XK_space,   spawn,              SHCMD("dunstctl close-all") },
     { ALTKEY|ShiftMask,         XK_comma,   spawn,              SHCMD("dunstctl history-pop") },
 
+    /* XF86Keys */
     { 0,    XK_Print,                   spawn,              SHCMD("maim pic-full-$(date '+%y%m%d-%H%M-%S').png") },
     { 0,    XF86XK_AudioRaiseVolume,    spawn,              SHCMD("pulsevol inc; pkill -RTMIN+17 dwmblocks") },
     { 0,    XF86XK_AudioLowerVolume,    spawn,              SHCMD("pulsevol dec; pkill -RTMIN+17 dwmblocks") },
     { 0,    XF86XK_AudioMute,           spawn,              SHCMD("pulsevol mute; pkill -RTMIN+17 dwmblocks") },
+    { 0,    XF86XK_MonBrightnessUp,     spawn,              SHCMD("xbacklight +10") },
+    { 0,    XF86XK_MonBrightnessDown,   spawn,              SHCMD("xbacklight -10") },
 };
 
 /* button definitions */
