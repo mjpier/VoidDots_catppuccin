@@ -1,8 +1,0 @@
-2022/05/15-11:29:18.435 bd7 Reusing MANIFEST /home/mjpier/.local/share/qutebrowser/webengine/IndexedDB/https_79930084b4fd4c8384011e6f969007de.safeframe.googlesyndication.com_0.indexeddb.leveldb/MANIFEST-000001
-2022/05/15-11:29:18.435 bd7 Recovering log #13
-2022/05/15-11:29:18.435 bd7 Reusing old log /home/mjpier/.local/share/qutebrowser/webengine/IndexedDB/https_79930084b4fd4c8384011e6f969007de.safeframe.googlesyndication.com_0.indexeddb.leveldb/000013.log 
-2022/05/15-11:29:20.995 41e Level-0 table #17: started
-2022/05/15-11:29:20.995 41e Level-0 table #17: 0 bytes OK
-2022/05/15-11:29:21.003 41e Delete type=0 #13
-2022/05/15-11:29:21.003 41e Manual compaction at level-0 from (begin) .. (end); will stop at (end)
-2022/05/15-11:29:21.004 41e Manual compaction at level-1 from (begin) .. (end); will stop at (end)

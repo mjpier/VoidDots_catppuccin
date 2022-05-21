@@ -1,5 +1,0 @@
-2022/05/14-15:02:20.053 2396 Reusing MANIFEST /home/mjpier/.local/share/qutebrowser/webengine/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb/MANIFEST-000001
-2022/05/14-15:03:45.269 25d0 Level-0 table #5: started
-2022/05/14-15:03:45.276 25d0 Level-0 table #5: 1820 bytes OK
-2022/05/14-15:03:45.281 25d0 Delete type=0 #3
-2022/05/14-15:03:45.281 25d0 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

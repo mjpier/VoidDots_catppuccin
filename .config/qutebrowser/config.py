@@ -125,24 +125,24 @@ c.fonts.completion.category = 'bold default_size default_family'
 c.fonts.contextmenu = '16px default_family'
 
 # Colors
-bg = "#1d2021"
-fg = "#d4be98"
-base01 = "#1d2021" # black
-base02 = "#ea6962" # red
-base03 = "#a9b665" # green
-base04 = "#e78a4e" # yellow
-base05 = "#7daea3" # blue
-base06 = "#d3869b" # magenta
-base07 = "#89b482" # cyan
-base08 = "#d4be98" # white
-base09 = "#32302f" # black
-base10 = "#ea6962" # red
-base11 = "#a9b665" # green
-base12 = "#e78a4e" # yellow
-base13 = "#7daea3" # blue
-base14 = "#d3869b" # magenta
-base15 = "#89b482" # cyan
-base16 = "#d4be98" # white
+bg = "#1e1e2e"
+fg = "#dadae8"
+base01 = "#1e1e2e" # black
+base02 = "#1e1e2e" # red
+base03 = "#b1e3ad" # green
+base04 = "#ebddaa" # yellow
+base05 = "#6e6c7e" # blue
+base06 = "#1e1e2e" # magenta
+base07 = "#e5b4e2" # cyan
+base08 = "#dadae8" # white
+base09 = "#6e6c7e" # black
+base10 = "#1e1e2d" # red
+base11 = "#f7be95" # green
+base12 = "#1e1e2d" # yellow
+base13 = "#92d2e8" # blue
+base14 = "#f28fad" # magenta
+base15 = "#e5b4e2" # cyan
+base16 = "#e38c8f" # white
 
 # Context menu colors
 c.colors.contextmenu.menu.bg = bg

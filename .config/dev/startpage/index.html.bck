@@ -22,10 +22,10 @@
         <div style="padding-left: 20px;">
           ---------------------------------<br/>
           <div style="float: left;">&nbsp;Last login:</div><div id="log_time" style="float: left;">--:--:--</font><br/></div><div style="clear: both;"></div>
-          &nbsp;Welcome to your  <font color=#b1e3ad>Void Linux.</font><br/>
+          &nbsp;Welcome to your  <font color=#7daea3>Void Linux.</font><br/>
           ---------------------------------<br/>
 
-          ╭─<font color=#f7be95>mjpier@voidOS</font> <font color=#b1e3ad>~/home/scripts</font> <font color=#e38c8f>‹main*›</font><br/>
+          ╭─<font color=#a9b665>mjpier@voidOS</font> <font color=#7daea3>~/home/scripts</font> <font color=#ea6962>‹main*›</font><br/>
           ╰─$ ls -la<br/>
 
             <div class="bookmark-container">
@@ -52,7 +52,7 @@
             </div>
             </div>
 
-        ╭─<font color=#f7be95>mjpier@voidOS</font> <font color=#b1e3ad>~/home/scripts</font> <font color=#e38c8f>‹main*›</font><br/>
+        ╭─<font color=#a9b665>mjpier@voidOS</font> <font color=#7daea3>~/home/scripts</font> <font color=#ea6962>‹main*›</font><br/>
         ╰─$ lsb_release -a<br/>
         LSB Version:	1.0<br/>
         Distributor ID:	VoidLinux<br/>

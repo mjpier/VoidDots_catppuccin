@@ -1,8 +1,8 @@
 body {
   font-family: monospace;
   font-size: 12pt;
-  color: #d4be98;
-  background-color: #1d2021;
+  color: #f7be95;
+  background-color: #1e1e2e;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -39,13 +39,13 @@ a {
 #clock {
   text-align: center;
   font-size: 24pt;
-  color: #a9b665;
+  color: #b1e3ad;
 }
 
 #log_time {
   padding-left: 5px;
   text-align: center;
-  color: #ea6962;
+  color: #e38c8f;
 }
 
 .search-bar {
@@ -57,9 +57,9 @@ a {
 .search-bar input {
   min-width: 500px;
   border-radius: 5px;
-  color: #d4be98;
-  background-color: #1d2021;
-  border: 0px solid #1d2021;
+  color: #f7be95;
+  background-color: #1e1e2e;
+  border: 0px solid #1e1e2d;
   width: 50%;
   padding: 5px;
 }
@@ -96,7 +96,7 @@ a {
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 5px;
-  background-color: #1d2021;
+  background-color: #1e1e2e;
   margin: 0 auto;
 }
 
@@ -109,7 +109,7 @@ a {
 }
 
 .bookmark-set {
-  border: 1px solid #7daea3;
+  border: 1px solid #b1e3ad;
   flex: 1 0 100px;
   margin-right: 20px;
   margin-top: 10px;
@@ -123,14 +123,14 @@ a {
   text-align: center;
   margin-bottom: 5px;
   color: #1d2021;
-  background-color: #7daea3;
+  background-color: #b1e3ad;
 }
 
 .bookmark {
   font-size: 11pt;
   margin-bottom: 2px;
   text-align: center;
-  color: #7daea3;
+  color: #b1e3ad;
 }
 
 .bookmark a:focus {

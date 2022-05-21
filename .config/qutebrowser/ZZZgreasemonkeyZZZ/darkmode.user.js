@@ -13,7 +13,7 @@
 // ==/UserScript==
 
 DarkReader.enable({
-	brightness: 90,
-	contrast: 80,
+	brightness: 100,
+	contrast: 90,
 	sepia: 10
 });
