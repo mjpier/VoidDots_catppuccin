@@ -1,0 +1,4 @@
+#!/bin/sh
+
+. sb-theme
+display "^b$color1^  $(date '+%a %m/%d, %I:%M %p') ^d^"

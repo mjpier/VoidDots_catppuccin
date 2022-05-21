@@ -1,0 +1,40 @@
+diff --git a/config.def.h b/config.def.h
+index 2f7a665..a9de280 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -169,7 +169,7 @@ static Key keys[] = {
+     { MODKEY|ShiftMask,         XK_i,       setlayout,          {.v = &layouts[7]} }, // centeredfloatingmaster
+     { MODKEY,                   XK_space,   setlayout,          {0} },
+     { MODKEY|ShiftMask,         XK_space,   togglefloating,     {0} },
+-    //{ MODKEY,                   XK_f,       togglefullscreen,   {0} },
++    { MODKEY,                   XK_f,       togglefullscreen,   {0} },
+     { MODKEY|ShiftMask,         XK_c,       togglecolorfultag,  {0} },
+     { MODKEY,                   XK_0,       view,               {.ui = ~0 } },
+     { MODKEY|ShiftMask,         XK_0,       tag,                {.ui = ~0 } },
+diff --git a/dwm.c b/dwm.c
+index 238fa75..c9b9df4 100644
+--- a/dwm.c
++++ b/dwm.c
+@@ -234,6 +234,7 @@ static void tagmon(const Arg *arg);
+ static void togglebar(const Arg *arg);
+ static void togglecolorfultag();
+ static void togglefloating(const Arg *arg);
++static void togglefullscreen(const Arg *arg);
+ static void toggletag(const Arg *arg);
+ static void toggleview(const Arg *arg);
+ static void unfocus(Client *c, int setfocus);
+@@ -2013,6 +2014,14 @@ togglefloating(const Arg *arg)
+     arrange(selmon);
+ }
+ 
++void
++togglefullscreen(const Arg *arg) {
++    if (!selmon->sel)
++        return;
++
++    setfullscreen(selmon->sel, !selmon->sel->isfullscreen);
++}
++
+ void
+ toggletag(const Arg *arg)
+ {
